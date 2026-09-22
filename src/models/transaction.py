@@ -23,3 +23,14 @@ class Transaction:
         self.description = description
         self.date = date
         self.transaction_type = transaction_type
+
+    def __repr__(self):
+            return (
+                f"Transaction("
+                f"amount={self.amount}, "
+                f"category='{self.category}', "
+                f"date='{self.date}', "
+                f"transaction_type='{self.transaction_type.value}', "
+                f"description='{self.description}'"
+                f")"
+            )
